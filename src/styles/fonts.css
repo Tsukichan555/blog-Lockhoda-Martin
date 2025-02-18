@@ -1,0 +1,63 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * clicker:
+ *   - http://typekit.com/eulas/00000000000000003b9ae3cb
+ * franklin-gothic-atf:
+ *   - http://typekit.com/eulas/00000000000000007735c714
+ *   - http://typekit.com/eulas/00000000000000007735c733
+ * montserrat:
+ *   - http://typekit.com/eulas/00000000000000007735a185
+ *   - http://typekit.com/eulas/00000000000000007735a1a1
+ * obvia:
+ *   - http://typekit.com/eulas/00000000000000007735bd18
+ *
+ * © 2009-2025 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2025-02-08 15:26:03 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=xyt3nsh&ht=tk&f=16353.37471.30084.39775.44927.44940&a=274890801&app=typekit&e=css");
+
+@font-face {
+font-family:"montserrat";
+src:url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/32b0e4/00000000000000007735a185/30/a?subset_id=2&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"montserrat";
+src:url("https://use.typekit.net/af/246c1c/00000000000000007735a1a1/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff2"),url("https://use.typekit.net/af/246c1c/00000000000000007735a1a1/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff"),url("https://use.typekit.net/af/246c1c/00000000000000007735a1a1/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:900;font-stretch:normal;
+}
+
+@font-face {
+font-family:"clicker";
+src:url("https://use.typekit.net/af/6a4631/00000000000000003b9ae3cb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/6a4631/00000000000000003b9ae3cb/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/6a4631/00000000000000003b9ae3cb/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
+}
+
+@font-face {
+font-family:"obvia";
+src:url("https://use.typekit.net/af/44fcac/00000000000000007735bd18/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/44fcac/00000000000000007735bd18/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/44fcac/00000000000000007735bd18/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"franklin-gothic-atf";
+src:url("https://use.typekit.net/af/02fe58/00000000000000007735c714/30/l?subset_id=2&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/02fe58/00000000000000007735c714/30/d?subset_id=2&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/02fe58/00000000000000007735c714/30/a?subset_id=2&fvd=n2&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:200;font-stretch:normal;
+}
+
+@font-face {
+font-family:"franklin-gothic-atf";
+src:url("https://use.typekit.net/af/6d3002/00000000000000007735c733/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/6d3002/00000000000000007735c733/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/6d3002/00000000000000007735c733/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+.tk-montserrat { font-family: "montserrat",sans-serif; }
+.tk-clicker { font-family: "clicker",sans-serif; }
+.tk-obvia { font-family: "obvia",sans-serif; }
+.tk-franklin-gothic-atf { font-family: "franklin-gothic-atf",sans-serif; }

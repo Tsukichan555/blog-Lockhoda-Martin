@@ -1,0 +1,36 @@
+.Header {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(2 * 1.2em);
+    padding: 16px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color: var(--text-color);
+    background-color: rgb(255, 214, 214); /* var(--background-color); */
+    width: inherit;
+    /* 横幅いっぱいに広がるように */
+}
+
+.Header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.Header li {
+    margin-right: 20px;
+}
+
+.nav {
+    font-family: 'clicker', 'Helvetika', 'Arial', sans-serif;
+    font-weight: 300;
+}
+
+.nav2 {
+    font-family: 'obvia', 'Helvetika', 'Arial', sans-serif;
+    font-weight: 400;
+}
