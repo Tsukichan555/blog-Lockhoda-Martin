@@ -1,7 +1,9 @@
-import Layout from '@/app/layout'
+//app/[id]/page.js
+//個別記事ページ
 import { client } from '@/libs/microcms'
 import dayjs from 'dayjs'
 import { md2html } from '@/libs/md2html'
+import Image from 'next/image'
 
 //get specific post data from microCMS
 async function getBlogPost(id) {
@@ -19,13 +21,36 @@ export default async function BlogPostPage({ params }) {
     // dayjsを使ってpublishedAtをYY.MM.DD形式に変換
     const formattedDate = dayjs(post.publishedAt).format('YY.MM.DD');
 
+    //md2htmlを使ってcontentをHTMLに変換
+    const htmlContent = await md2html(post.content);
+
+    //debug
+    console.log('-----------------------');
+    console.log(post);
+    console.log('-----------------------');
+    console.log(htmlContent);
+    console.log('-----------------------');
+
     return (
-        <main>
-            <h1>{post.title}</h1> {/* タイトルを表示 */}
-            <div>{formattedDate}</div> {/* 日付を表示 */}
-            <div>カテゴリー：{post.category && post.category.name}</div> {/* カテゴリーを表示 */}
-            {/*<div dangerouslySetInnerHTML={{ __html: post.body }} />  記事本文を表示 */}
-        </main>
+        <>
+            <section>
+                <div>
+                    <h1>{post.title}</h1> {/* タイトルを表示 */}
+                    <div>{formattedDate}</div> {/* 日付を表示 */}
+                    
+                                    </div>
+                                    <div>
+                                        {post.pic ? (
+                                            <Image src={post.pic.url} alt={post.title} width={post.pic.width} height={post.pic.height} /> // 画像を表示
+                                        ) : (
+                                            <span>🚀</span> // ロケットの絵文字を表示
+                                        )}
+                                    </div>
+                                </section>
+                                <section>
+                                    <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div> {/* 記事本文を表示 */}
+            </section>
+        </>
     );
 }
 

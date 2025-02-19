@@ -1,3 +1,4 @@
+//app/Layout.js レイアウト
 import { Noto_Sans_JP } from "next/font/google";
 import "@/app/globals.css";
 import Header from "@/components/Header";
@@ -28,7 +29,9 @@ export default function RootLayout({ children }) {
         </head>
       <body>
         <Header className="nav-link" />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
       </body>
     </html >

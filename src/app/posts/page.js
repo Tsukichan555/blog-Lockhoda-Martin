@@ -1,3 +1,6 @@
+// app/posts/page.js
+//投稿一覧ページ
+
 import React from 'react';
 import Link from 'next/link'
 import { client } from '@/libs/microcms'
@@ -7,29 +10,35 @@ async function getBLogPosts() {
     const data = await client.get({
         endpoint: 'blogs',
         queries: {
-            fileds: 'id, title',
+            fields: 'id, title', //idとtitleを取得
 
         },
     });
     return data.contents;
 }
 
-async function PostsPage() {
+export async function PostsPage() {
     const posts = await getBLogPosts();
 
     return (
-        <div>
+        <>
             <h1>記事一覧</h1>
             <ul>
                 {posts.map(post => (
                     <li key={post.id}>
-                        <h2>{post.title}</h2>
-                        <p>{post.date || 'No date provided'}</p>
-                        <p          dangerouslySetInnerHTML={{ __html: post.content }} />
-                    </li>
+                        
+                        <Link href={`/posts/${post.id}`}>
+                            <h2>{post.title || "No Title" }</h2>
+                            <p>{post.date || 'No date provided'}</p>
+                            {/* <p dangerouslySetInnerHTML={{ __html: post.content }} /> */}
+                        </Link>
+                        </li>
                 ))}
+
+
+                
             </ul>
-        </div>
+        </>
     );
 };
 

@@ -1,3 +1,6 @@
+//app/page.js
+//トップページ
+
 import s from '@/styles/index.module.css';
 import Link from 'next/link';
 import { client } from '@/libs/microcms';
@@ -24,7 +27,7 @@ export default async function Home() {
       <h1 className={s.title}>
         <span className={s.line1}>Lockhoda</span>
         <br />
-        <span classNam                   e={s.line2}>Martin</span>
+        <span className={s.line2}>Martin</span>
       </h1>
       <section>
         <h2>Latest Articles</h2>
