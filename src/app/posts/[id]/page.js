@@ -35,20 +35,19 @@ export default async function BlogPostPage({ params }) {
         <>
             <section>
                 <div>
+                    {post.pic ? (
+                        <Image src={post.pic.url} alt={post.title} width={post.pic.width} height={post.pic.height} /> // 画像を表示
+                    ) : (
+                        <span>🚀</span> // ロケットの絵文字を表示
+                    )}
+                </div>
+                <div>
                     <h1>{post.title}</h1> {/* タイトルを表示 */}
                     <div>{formattedDate}</div> {/* 日付を表示 */}
-                    
-                                    </div>
-                                    <div>
-                                        {post.pic ? (
-                                            <Image src={post.pic.url} alt={post.title} width={post.pic.width} height={post.pic.height} /> // 画像を表示
-                                        ) : (
-                                            <span>🚀</span> // ロケットの絵文字を表示
-                                        )}
-                                    </div>
-                                </section>
-                                <section>
-                                    <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div> {/* 記事本文を表示 */}
+                </div>
+            </section>
+            <section>
+                <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div> {/* 記事本文を表示 */}
             </section>
         </>
     );

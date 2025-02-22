@@ -11,20 +11,33 @@
   "dependencies": {
     "@rehype-pretty/transformers": "^0.13.2",
     "dayjs": "^1.11.13",
+    "katex": "^0.16.21",
     "microcms-js-sdk": "^3.1.2",
     "next": "15.1.6",
+    "playwright": "^1.50.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "rehype-katex": "^7.0.1",
+    "rehype-mermaid": "^3.0.0",
     "rehype-pretty-code": "^0.14.0",
     "rehype-stringify": "^10.0.1",
+    "remark": "^15.0.1",
+    "remark-custom-blocks": "^2.6.1",
     "remark-gfm": "^4.0.1",
+    "remark-mermaid": "^0.2.0",
+    "remark-mermaidjs": "^7.0.0",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.1",
     "shiki": "^2.4.2",
     "unified": "^11.0.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
     "@eslint/eslintrc": "^3",
+    "babel-loader": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "15.1.6"
   }
