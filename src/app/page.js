@@ -9,7 +9,7 @@ import { client } from '@/libs/microcms';
 // microCMSからブログ記事を取得
 async function getBlogPosts() {
   const data = await client.get({
-    endpoint: 'blogs',
+    endpoint: 'blog',
     queries: {
       fileds: 'id, title', //get id and title
       limit: 3, //get latest 3 posts

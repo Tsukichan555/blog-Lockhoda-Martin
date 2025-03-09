@@ -8,7 +8,7 @@ import Image from 'next/image'
 //get specific post data from microCMS
 async function getBlogPost(id) {
     const data = await client.get({
-        endpoint: `blogs/${id}`,
+        endpoint: `blog/${id}`,
     });
     return data;
 }
@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }) {
 
 // 静的パスを生成
 export async function generateStaticParams() {
-    const contentIds = await client.getAllContentIds({ endpoint: 'blogs' });
+    const contentIds = await client.getAllContentIds({ endpoint: 'blog' });
 
     return contentIds.map((contentId) => ({
         id: contentId, // 各記事のIDをパラメータとして返す

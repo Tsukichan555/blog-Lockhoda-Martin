@@ -8,7 +8,7 @@ import { client } from '@/libs/microcms'
 //get articles from microCMS
 async function getBLogPosts() {
     const data = await client.get({
-        endpoint: 'blogs',
+        endpoint: 'blog',
         queries: {
             fields: 'id, title', //idとtitleを取得
 
