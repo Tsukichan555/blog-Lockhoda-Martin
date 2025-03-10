@@ -22,14 +22,14 @@ export default async function BlogPostPage({ params }) {
     const formattedDate = dayjs(post.publishedAt).format('YY.MM.DD');
 
     //md2htmlを使ってcontentをHTMLに変換
-    const htmlContent = await md2html(post.content);
+    //const htmlContent = await md2html(post.content);
 
     //debug
     console.log('-----------------------');
     console.log(post);
-    console.log('-----------------------');
-    console.log(htmlContent);
-    console.log('-----------------------');
+   
+    //生のhtml文字列を変数に格納
+    const htmlContent = { __html: post.body };
 
     return (
         <>
@@ -44,10 +44,26 @@ export default async function BlogPostPage({ params }) {
                 <div>
                     <h1>{post.title}</h1> {/* タイトルを表示 */}
                     <div>{formattedDate}</div> {/* 日付を表示 */}
+                    <div> {/* post.tags(スラッシュ区切りの文字列)を1つずつ表示 */}
+                        {post.tags && typeof post.tags === 'string' ? (
+                            post.tags.split('/').map((tag, index) => (
+                                tag.trim() !== '' && <span key={index}>{tag.trim()}</span>
+                            ))
+                        ) : post.tags && Array.isArray(post.tags) ? (
+                            post.tags.map((tag) => (
+                                <span key={tag.id}>{tag.name}</span>
+                            ))
+                        ) : (
+                            null
+                        )}
+                    </div>
+
                 </div>
             </section>
+
+            
             <section>
-                <div dangerouslySetInnerHTML={{ __html: htmlContent }}></div> {/* 記事本文を表示 */}
+                <div dangerouslySetInnerHTML={ htmlContent }/> {/* 記事本文を表示 */} 
             </section>
         </>
     );

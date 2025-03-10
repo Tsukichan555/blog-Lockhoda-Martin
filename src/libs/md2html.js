@@ -10,7 +10,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import remarkCustomBlocks from 'remark-custom-blocks';
-import rehypeMermaid from 'rehype-mermaid'
+//import rehypeMermaid from 'rehype-mermaid'
 
 
 
