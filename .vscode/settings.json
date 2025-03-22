@@ -1,3 +1,4 @@
 {
-    "editor.fontWeight": "bold"
+    "editor.fontWeight": "normal",
+    "editor.fontFamily": "Hack Nerd Font"
 }

@@ -11,6 +11,7 @@ html {
   --visited-link-color: #b72c41;
   --shade-color: #484848;
   --text-color: #f6f6f6;
+  --weak-text-color: #7e7e7e;
   --font-family: 'Noto Sans JP', Arial, sans-serif; /* フォントファミリーを追加 */
 }
 

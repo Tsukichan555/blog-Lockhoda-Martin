@@ -7,14 +7,14 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import { transformerCopyButton } from '@rehype-pretty/transformers';
 
 import remarkGfm from 'remark-gfm';
-import rehypeKatex from 'rehype-katex';
-import 'katex/dist/katex.min.css';
-import remarkCustomBlocks from 'remark-custom-blocks';
+/* import rehypeKatex from 'rehype-katex'; */
+/* import 'katex/dist/katex.min.css'; */
+/* import remarkCustomBlocks from 'remark-custom-blocks'; */
 //import rehypeMermaid from 'rehype-mermaid'
 
 
 
-export async function md2html(mdContent) {
+export async function Md2html(mdContent) {
   const file = await unified()
     .use(remarkParse) // Markdownを解析
     //.use(remarkMermaid) // mermaid記法

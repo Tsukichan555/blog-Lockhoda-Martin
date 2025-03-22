@@ -17,7 +17,7 @@ async function getBLogPosts() {
     return data.contents;
 }
 
-export async function PostsPage() {
+export default async function PostsPage() {
     const posts = await getBLogPosts();
 
     return (
@@ -42,4 +42,3 @@ export async function PostsPage() {
     );
 };
 
-export default PostsPage;

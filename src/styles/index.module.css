@@ -1,3 +1,27 @@
 .title {
   font-family: 'Hanson', 'Helvetika', 'Arial', sans-serif;
+  font-size: 18 vw;
+  font-weight: bold;
+} 
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: #fff;
+}
+
+
+
+.heroDescription {
+  font-size: 0.8rem;
+  color: var(--weak-text-color);
+  margin-top: 1rem;
+}
+
+.hero {
+  min-height: 40 vh;
+
 }
