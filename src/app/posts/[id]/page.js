@@ -2,9 +2,10 @@
 //個別記事ページ
 import { client } from '@/libs/microcms'
 import dayjs from 'dayjs'
-import { Md2html } from '@/libs/md2html'
 import Image from 'next/image'
 import s from '@/styles/page.module.css'
+
+import Md2html from '@/libs/Md2html'
 
 //get specific post data from microCMS
 async function getBlogPost(id) {
@@ -14,6 +15,8 @@ async function getBlogPost(id) {
     return data;
 }
 
+
+
 //generate post page
 export default async function BlogPostPage({ params }) {
     const { id } = await params; //get id
@@ -22,15 +25,9 @@ export default async function BlogPostPage({ params }) {
     // dayjsを使ってpublishedAtをYY.MM.DD形式に変換
     const formattedDate = dayjs(post.publishedAt).format('YY.MM.DD');
 
-    //md2htmlを使ってcontentをHTMLに変換
-    //const htmlContent = await Md2html(post.content);
+    //react-markdownを使ってMarkdownをHTMLに変換
 
-    //debug
-    console.log('-----------------------');
-    console.log(post);
 
-    //生のhtml文字列を変数に格納
-    //const htmlContent = { __html: post.body };
 
     return (
         <>
@@ -48,8 +45,9 @@ export default async function BlogPostPage({ params }) {
                     <div> {/* post.tags(スラッシュ区切りの文字列)を1つずつ表示 */}
                         {post.tags && (
                             <div className={s.tags}>
-                                {post.tags.split("/").map((tag) => (
-                                    <span className={s.tag}>{tag}</span>
+                                {post.tags.split("/").map((tag, index) => (
+                                    <span className={s.tag} key={index}
+                                    >{tag}</span>
                                 ))}
                             </div> /* tags */
                         )}
@@ -58,9 +56,8 @@ export default async function BlogPostPage({ params }) {
                 </div>
             </section>
 
-
             <section>
-                {post.body} {/* 記事本文を表示 */}
+                <Md2html rawMd={post.maincontent} />
             </section>
         </>
     );

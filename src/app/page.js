@@ -8,7 +8,7 @@ import Image from 'next/image';
 import dayjs from 'dayjs';
 
 // iamges
-import FighterJetSilhouette from '/figher-jet-silhouette.png'; //public
+//import FighterJetSilhouette from '/figher-jet-silhouette.png'; //public
 
 
 // microCMSからブログ記事を取得
@@ -50,7 +50,7 @@ export default async function Home() {
         </div>{/* heroContent */}
 
         <div className="heroImage">
-          <Image width={500} height={500} src={FighterJetSilhouette} alt="Fighter Jet Silhouette" />
+          <Image width={500} height={500} src='/figher-jet-silhouette.png' alt="Fighter Jet Silhouette" />
         </div>{/* heroImage */}
 
       </section>{/* hero */}
