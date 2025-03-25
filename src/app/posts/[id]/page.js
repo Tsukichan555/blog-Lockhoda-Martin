@@ -57,7 +57,12 @@ export default async function BlogPostPage({ params }) {
             </section>
 
             <section>
-                <Md2html rawMd={post.maincontent} />
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: `${post.maincontent}`,
+                    }}
+                />
+
             </section>
         </>
     );

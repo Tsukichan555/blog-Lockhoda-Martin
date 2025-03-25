@@ -1,10 +1,14 @@
-import Markdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown'
+import rehypeStarryNight from 'rehype-starry-night'
 import remarkGfm from 'remark-gfm'
+import React from 'react'
 
-export default function Md2html({ rawMd }) {
-    return (
-        <Markdown remarkPlugins={[remarkGfm]}>
-            {rawMd}
-        </Markdown>
-    )
+const Md2html = ({ rawMd }) => {
+  return (
+    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+      {rawMd}
+    </ReactMarkdown>
+  )
 }
+
+export default Md2html
