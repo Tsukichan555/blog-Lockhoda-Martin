@@ -30,8 +30,8 @@ body {
   display: flex;
   padding: 1rem;
   flex-direction: column;
-  justify-content: center;
-  max-width: 48rem;
+  justify-content: space-around;
+  max-width: 90vw;
   min-height: 100vh;
 }
 
@@ -46,7 +46,7 @@ h5 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h2 {

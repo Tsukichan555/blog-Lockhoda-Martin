@@ -74,15 +74,15 @@ export default async function Home() {
 
                 <div className={s.articleInfo}>
 
-                  <h3>{post.title}</h3>
+                  <h3 className={s.articleTItle}>{post.title}</h3>
 
                   <div className={s.articleMeta}>
 
                     <span className={s.date}>{dayjs(post.publishedAt).format('YYYY/MM/DD')}</span>
                     {post.tags && (
                       <div className={s.tags}>
-                        {post.tags.split("/").map((tag) => (
-                          <span className={s.tag}>{tag}</span>
+                        {post.tags.split("/").map((tag, index) => (
+                          <span className={s.tag} index={index}>{tag}</span>
                         ))}
                       </div> /* tags */
                     )}
