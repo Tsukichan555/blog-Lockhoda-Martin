@@ -57,6 +57,15 @@ src:url("https://use.typekit.net/af/6d3002/00000000000000007735c733/30/l?primer=
 font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
 }
 
+/* Custom Hanson Bold font */
+@font-face {
+  font-family: "Hanson";
+  src: url("/font/Hanson-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 .tk-montserrat { font-family: "montserrat",sans-serif; }
 .tk-clicker { font-family: "clicker",sans-serif; }
 .tk-obvia { font-family: "obvia",sans-serif; }

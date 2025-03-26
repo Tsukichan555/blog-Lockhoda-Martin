@@ -1,6 +1,7 @@
 //app/Layout.js レイアウト
 import { Noto_Sans_JP } from "next/font/google";
 import "@/app/globals.css";
+import "@/styles/fonts.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -28,11 +29,13 @@ export default function RootLayout({ children }) {
         {/*<link rel="stylesheet" href="https://use.typekit.net/xyt3nsh.css"></link> */}
         </head>
       <body>
-        <Header className="nav-link" />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <div style={{ overflow: 'hidden', width: '100%', position: 'relative' }}>
+          <Header className="nav-link" />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html >
   );

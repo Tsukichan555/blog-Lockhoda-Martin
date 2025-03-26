@@ -1,0 +1,79 @@
+.footer {
+  background-color: #0a1429; /* Dark blue background as shown in the image */
+  color: white;
+  width: 100vw;
+  padding: 2rem 0;
+  margin-left: calc(-50vw + 50%);
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  font-family: 'franklin-gothic-atf', 'Helvetika', 'Arial', sans-serif;
+}
+
+.footer > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.socialLinks, .partnerLinks, .navLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+}
+
+.linkItem a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.linkItem a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.icon {
+  margin-left: 0.5rem;
+  filter: invert(100%); /* Make the SVG icon white */
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .footer > div {
+    padding: 0 1.5rem;
+  }
+  
+  .navLinks {
+    margin-top: 1rem;
+  }
+}

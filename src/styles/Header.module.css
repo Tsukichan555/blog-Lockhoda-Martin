@@ -1,36 +1,95 @@
-.Header {
-    display: flex;
-    list-style: none;
-    align-items: center;
+.header {
+  background-color: #0a1429; /* Dark blue background to match footer */
+  color: white;
+  width: 100vw;
+  padding: 1.5rem 0;
+  margin-left: calc(-50vw + 50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  font-family: 'franklin-gothic-atf', 'Helvetika', 'Arial', sans-serif;
+}
+
+.header > div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.logo a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.logoImage {
+  margin-right: 0.75rem;
+  filter: invert(100%); /* Make the logo white */
+}
+
+.logo span {
+  letter-spacing: 1px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.linkItem a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.linkItem a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.linkItem a:visited {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .navLinks {
+    flex-wrap: wrap;
     justify-content: center;
-    min-height: calc(2 * 1.2em);
-    padding: 16px;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    color: var(--text-color);
-    background-color: rgb(255, 214, 214); /* var(--background-color); */
-    width: inherit;
-    /* 横幅いっぱいに広がるように */
-}
-
-.Header ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-}
-
-.Header li {
-    margin-right: 20px;
-}
-
-.nav {
-    font-family: 'clicker', 'Helvetika', 'Arial', sans-serif;
-    font-weight: 300;
-}
-
-.nav2 {
-    font-family: 'obvia', 'Helvetika', 'Arial', sans-serif;
-    font-weight: 400;
+    gap: 1rem;
+  }
+  
+  .header > div {
+    padding: 0 1.5rem;
+  }
 }

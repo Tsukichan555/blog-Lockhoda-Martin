@@ -16,6 +16,7 @@
     "katex": "^0.16.21",
     "microcms-js-sdk": "^3.1.2",
     "next": "15.1.6",
+    "node-html-parser": "^7.0.1",
     "playwright": "^1.50.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
