@@ -101,6 +101,13 @@
   flex-direction: column;
   height: 100%;
   color: var(--text-color);
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transitions for background and color */
+}
+
+.articleLink:hover {
+  background-color: rgba(28, 27, 34, 0.8); 
+  /* White background on hover */
   text-decoration: none;
 }
 
@@ -114,6 +121,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.gradientPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #160a53, #dd440c);
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .articleInfo {
@@ -151,7 +168,7 @@
   font-size: 0.7rem;
   color: var(--text-color);
   padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -171,6 +188,15 @@
   display: flex;
   margin-bottom: 3rem;
   gap: 2rem;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0); /* Initial state: no shadow */
+  border-radius: 8px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.topicCard:hover {
+  box-shadow: 0 0 20px rgba(128, 128, 128, 0.5); /* Grayish glow on hover */
   align-items: center;
 }
 
@@ -180,6 +206,8 @@
 
 .topicContent {
   flex: 1;
+  margin: 1rem;
+  padding: 1.5rem;
 }
 
 .topicTitle {

@@ -68,10 +68,13 @@ export default async function Home() {
 
               <Link href={`/posts/${post.id}`} className={s.articleLink}>
 
-                {post.pic && (<div className={s.articleImage}>
-                  <Image width={50} height={50} src={post.pic.url} alt="article thumbnail" />
-                </div>/* articleImage */
-                )}
+                <div className={s.articleImage}>
+                  {post.pic && post.pic.url ? (
+                    <Image width={50} height={50} src={post.pic.url} alt="article thumbnail" />
+                  ) : (
+                    <div className={s.gradientPlaceholder} />
+                  )}
+                </div>{/* articleImage */}
 
                 <div className={s.articleInfo}>
 
@@ -110,7 +113,7 @@ export default async function Home() {
             <h3 className={s.topicTitle}>機体製作</h3>
             <p className={s.topicDescription}>過去に製作したラジコン飛行機を紹介しています</p>
             <a href="#" className={s.readMoreBtn}>
-              read more <Image width={16} height={16} src="/airplane.svg" alt="Airplane icon" />
+              Read more
             </a>
           </div>
           <div className={s.topicImage}>
@@ -128,7 +131,7 @@ export default async function Home() {
             <h3 className={s.topicTitle}>航空祭レポ</h3>
             <p className={s.topicDescription}>過去に製作したラジコン飛行機を紹介しています</p>
             <a href="#" className={s.readMoreBtn}>
-              read more <Image width={16} height={16} src="/airplane.svg" alt="Airplane icon" />
+              Read more
             </a>
           </div>
           <div className={s.topicImage}>
