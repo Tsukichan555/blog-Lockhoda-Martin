@@ -1,4 +1,4 @@
-//app/Layout.js レイアウト
+//app/Layoutjs レイアウト
 import { Noto_Sans_JP } from "next/font/google";
 import "@/app/globals.css";
 import "@/styles/fonts.css";
@@ -25,17 +25,14 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content={metadata.keywords} />
         <meta name="author" content={metadata.author} />
 
-        {/* フォントのインポート */}
-        {/*<link rel="stylesheet" href="https://use.typekit.net/xyt3nsh.css"></link> */}
+        <link rel="stylesheet" href="https://use.typekit.net/xyt3nsh.css"></link>
         </head>
       <body>
-        <div style={{ overflow: 'hidden', width: '100%', position: 'relative' }}>
           <Header className="nav-link" />
           <main>
             {children}
           </main>
           <Footer />
-        </div>
       </body>
     </html >
   );

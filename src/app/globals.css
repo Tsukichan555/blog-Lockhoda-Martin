@@ -3,15 +3,15 @@
   --primary-color: #f7380d;
   --secondary-color: #111be2;
   --background-color: #0e0e0e;
-  --link-color:var(--primary-color);
-  --visited-link-color: #b72c41;
+  --link-color: #2331ff;
+  --visited-link-color: #7731f0
   --shade-color: #484848;
   --text-color: #f6f6f6;
   --weak-text-color: #7e7e7e;
 }
 
 html {
-  font-size: 16px;
+  font-size: calc(14px + 0.25vw);
   scroll-behavior: smooth;
   font-family: 'Noto Sans JP', Arial, sans-serif; /* フォントファミリーを追加 */
   line-height: 1.75;
@@ -105,11 +105,16 @@ a:visited {
 
 /* Container for centering content */
 main {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 0; /* Add extra top margin to account for fixed header */
+  /*margin: 0 clamp(1rem, 500px - 5vw, 30vw) 10px;*/ 
+  margin: 0 clamp(10px, 4rem + 2vw, 30vw) 20px;
+  @media screen and (max-width: 768px) {
+    margin: 0 3vw 15px;
+  }
+  @media screen and (max-width: 480px) {
+    margin: 0 1rem 10px;
+  }
+
+  min-width: 12rem;
   margin-bottom: calc(2rem + 200px); /* Add extra bottom margin to account for fixed footer */
   background: var(--background-color);
   border-radius: 8px;
@@ -125,31 +130,31 @@ main {
 }
 
 .heading {
-  font-family: 'montserrat', 'Helvetika', 'Arial', sans-serif;
+  font-family: 'obvia expanded', 'montserrat', 'Helvetika', 'Arial', sans-serif;
   font-weight: 900;
   font-style: italic;
 }
 
 .heading-normal {
-  font-family: 'montserrat', 'Helvetika', 'Arial', sans-serif;
+  font-family: 'obvia expanded', 'montserrat', 'Helvetika', 'Arial', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
 .header-footer {
-  font-family: 'vdl-yotag', 'Helvetika', 'Arial', sans-serif;
+  font-family: 'obvia expanded', 'vdl-yotag', 'Helvetika', 'Arial', sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
 .nav-menu {
-  font-family: 'franklin-gothic-atf', 'Helvetika', 'Arial', sans-serif;
+  font-family: 'obvia expanded', 'franklin-gothic-atf', 'Helvetika', 'Arial', sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 
 .nav-menu-heading {
-  font-family: 'franklin-gothic-atf', 'Helvetika', 'Arial', sans-serif;
+  font-family: 'obvia expanded', 'franklin-gothic-atf', 'Helvetika', 'Arial', sans-serif;
   font-weight: 700;
   font-style: italic;
 }

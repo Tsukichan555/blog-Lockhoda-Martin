@@ -38,9 +38,11 @@ export default async function Home() {
         <div className={s.heroContent}>
 
           <h1 className={s.title}>
-            <span className={s.line1}>Lockhoda</span>
+            <span className={s.loc}>Lo</span>
+            <span className={s.khoda}>khoda</span>
             <br />
-            <span className={s.line2}>Martin</span>
+            <span className={s.ma}>Ma</span>
+            <span className={s.rtin}>rtin</span>
           </h1>{/* title */}
 
           <div className={s.heroDescription}>
@@ -51,7 +53,7 @@ export default async function Home() {
         </div>{/* heroContent */}
 
         <div className={s.heroImage}>
-          <Image width={800} height={800} src='/figher-jet-silhouette.png' alt="Fighter Jet Silhouette" priority />
+          <Image width={500} height={500} src='/figher-jet-silhouette.png' alt="Fighter Jet Silhouette" priority />
         </div>{/* heroImage */}
 
       </section>{/* hero */}
