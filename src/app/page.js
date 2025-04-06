@@ -30,7 +30,7 @@ export default async function Home() {
   const posts = await getBlogPosts();
 
   //debug
-  console.log(posts);
+  // console.log(posts);
   return (
     <>
       <section className={s.hero}>

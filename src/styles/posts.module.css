@@ -1,0 +1,165 @@
+.pageContainer {
+  display: flex;
+  padding: 5%;
+  marin-top: 15vh;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* tag selector */
+.tagSelectorContainer {
+  display: none;/*  flex; */
+  flex-direction: column;
+  width: 20%;
+}
+
+.tagSelectorTitle{
+  margin: 1rem;
+}
+
+.tagList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.tag {
+  padding: 0.5rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.tag:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Latest Articles Section */
+
+.articlesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+  width: 95%;
+}
+.latestArticles {
+  padding: 4rem 0;
+}
+
+.latestArticles h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.articleCard {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.articleCard:hover {
+  transform: translateY(-5px);
+}
+
+.articleLink {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  color: var(--text-color);
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transitions for background and color */
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.articleLink:hover {
+  background-color: rgba(28, 27, 34, 0.8); 
+  /* White background on hover */
+  text-decoration: none;
+}
+
+.articleImage {
+  width: 45%;
+  height: 180px;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.articleImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradientPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #160a53, #dd440c);
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.articleInfo {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.articleTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.articleMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--weak-text-color);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  color: var(--text-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
