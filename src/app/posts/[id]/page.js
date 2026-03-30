@@ -6,6 +6,7 @@ import 'dayjs/locale/ja';
 import Image from 'next/image';
 import s from '@/styles/page.module.css';
 import { parseHtmlContent } from '@/utils/htmlParser';
+import LikeButton from '@/components/ui/atoms/LikeButton';
 
 //get specific post data from microCMS
 async function getBlogPost(id) {
@@ -59,6 +60,10 @@ export default async function BlogPostPage({ params }) {
             <section className={s.postContent}>
                 {parsedContent}
             </section>
+
+            <div className={s.likeSection}>
+                <LikeButton postId={id} initialLikeCount={post.likeCount ?? 0} />
+            </div>
         </article>
     );
 }
